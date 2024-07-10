@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-linear-hero {
+      background: linear-gradient(to left, #0F141E, #1B1452);
+    }
+  }
+
+@layer utilities {
+    .bg-linear-btn {
+        background: rgba(45, 163, 125, 0.1);
+    }
+  }
+
+@layer utilities {
+    .bg-linear-hero2 {
+        background: linear-gradient(to right, #0F141E, #1B1452);
+    }
+  }

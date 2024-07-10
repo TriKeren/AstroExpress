@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroExpress</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/input.css">
+    <style>
+        .scroll-container::-webkit-scrollbar {
+            height: 10px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: #A0AEC0;
+            border-radius: 10px;
+        }
+        .scroll-container::-webkit-scrollbar-track {
+            background: #E2E8F0;
+        }
+
+        .scroll-container {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="scroll-smooth">
+    <section class="bg-linear-hero max-h-max">
+        <div class="w-full flex justify-center sticky left-0 top-0 z-50">
+            <nav class="w-full max-w-screen-xl mx-auto flex py-6 items-center justify-between px-7 md:px-11 lg:px-24">
+                <img class="w-36 lg:w-44" src="/image/Logo.png" alt="Logo">
+                <ul id="nav-items" class="hidden md:flex flex-1 justify-center gap-5 lg:gap-5 md:gap-2 items-center text-lg font-normal text-white">
+                    <li><a href="">Our Service</a></li>
+                    <li><a href="">Our Check Recipes</a></li>
+                    <li><a href="">Our Check Shipping Free</a></li>
+                    <li><a href="">Location</a></li>
+                </ul>
+                <a id="contact-button" class="bg-linear-btn rounded-xl hidden md:block" href="">
+                    <div class="flex justify-center items-center p-3">
+                        <button class="text-[#2DA37D] font-medium lg:text-sm">Contact Us</button>
+                    </div>
+                </a>
+                <div class="hamburger md:hidden cursor-pointer" onclick="toggleMenu()">
+                    <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hidden w-8 h-8 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </div>
+            </nav>
+            <ul id="mobile-nav" class="hidden absolute top-full left-0 w-full flex flex-col items-start p-5 text-lg font-normal text-white md:hidden z-40">
+                <li class="w-full py-2"><a href="">Our Service</a></li>
+                <li class="w-full py-2"><a href="">Our Check Recipes</a></li>
+                <li class="w-full py-2"><a href="">Our Check Shipping Free</a></li>
+                <li class="w-full py-2"><a href="">Location</a></li>
+                <a class="bg-linear-btn rounded-xl w-full mt-4" href="">
+                    <div class="flex justify-center items-center p-3">
+                        <button class="text-[#2DA37D] font-medium lg:text-sm">Contact Us</button>
+                    </div>
+                </a>
+            </ul>
+        </div>
+
+        <section class="px-4 md:px-24 py-14 lg:py-16 text-white">
+            <div class="container mx-auto flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2 mt-10 px-0 lg:px-5">
+                    <p class="text-[#FFAC00] font-medium mb-3">Many smart people have used our service</p>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4">Fastest and Reliable Courier Service Worldwide</h1>
+                    <p class="text-lg mb-6 md:mb-8">Courier services between packages quickly and safely compared to others.</p>
+                    <div class="flex flex-col md:flex-row gap-2x` lg:gap-3">
+                        <button class="py-3 px-6 bg-[#2DA37D] text-white font-bold rounded-lg hover:bg-transparent transition duration-300 block mb-3 md:mb-0 md:inline-block md:mr-3 hover:text-[#2DA37D]">Try Now</button>
+                        <button class="py-3 px-6 bg-transparent text-[#2DA37D] font-bold rounded-lg hover:bg-[#2DA37D] transition duration-300 block md:inline-block hover:text-white">Learn More -></button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="/image/hero.png" alt="Hero Image" class="w-full md:max-w-lg">
+                </div>
+            </div>
+        </section>         
+    </section>
+
+    <section id="sec" class="relative z-20 bottom-12 lg:bottom-20 flex justify-center mx-2">
+        <div class="container mx-auto flex justify-center">
+            <div class="flex justify-center items-center bg-white w-10/12 lg:w-10/12 rounded-lg rounded-ss-3xl rounded-ee-3xl py-5 lg:py-16 lg:p-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                    <div class="text-center lg:text-left">
+                        <p class="text-lg font-bold text-[#FFAC00]">Select according to your needs</p>
+                        <p class="text-4xl font-bold text-[#141533]">Choose our services</p>
+                    </div>
+                    <div class="lg:flex justify-center items-center lg:gap-3">
+                        <div class="outline outline-1 outline-gray-500 rounded-lg rounded-ss-xl rounded-ee-xl p-3 lg:p-2 mb-4 lg:mb-0">
+                            <div class="flex justify-center items-center gap-2">
+                                <div class="bg-[#141533] p-3 rounded-xl flex justify-center items-center">
+                                    <img src="/icons/internet.svg" alt="">
+                                    </svg>
+                                </div>
+                                <p class="text-[#141533] w-[#27AE60] font-bold">Domestic Delivery</p>
+                            </div>
+                        </div>
+    
+                        <div class="outline outline-1 outline-gray-500 rounded-lg rounded-ss-xl rounded-ee-xl p-3 lg:p-2">
+                            <div class="flex justify-center items-center gap-2">
+                                <div class="bg-[#141533] p-3 rounded-xl flex justify-center items-center">
+                                    <img src="/icons/light.svg" alt="">
+                                </div>
+                                <p class="font-bold">World Wide Delivery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="flex justify-center items-center">
+            <div class="text-center">
+                <p class="font-medium text-[#FFAC00]">Why you should choose our services</p>
+                <h1 class="text-3xl font-bold">Here Are The Advantages We Offer</h1>
+            </div>
+        </div>
+        
+        <div class="flex justify-center items-center mx-6 md:mx-12 lg:mx-36 py-10 md:py-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+                <div class="flex flex-col md:flex-row items-center gap-3 p-3 md:p-6 lg:p-4 rounded-lg rounded-ss-3xl rounded-ee-3xl">
+                    <img class="w-24 md:w-36 lg:w-36" src="/image/rocket 2.png" alt="">
+                    <div class="flex-1 text-center md:text-left space-y-2">
+                        <h1 class="font-bold text-lg md:text-xl lg:text-xl">Delivery Anywhere</h1>
+                        <p class="w-full md:w-auto text-base md:text-lg lg:text-sm">Delivery between cities, countries or planets? Of course, we can do it</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-3 bg-linear-hero p-3 md:p-6 lg:p-4 rounded-lg rounded-ss-3xl rounded-ee-3xl text-white">
+                    <img class="w-24 md:w-36 lg:w-36" src="/image/pose 2.png" alt="">
+                    <div class="flex-1 text-center md:text-left space-y-2">
+                        <h1 class="font-bold text-lg md:text-xl lg:text-xl">Delivery Anywhere</h1>
+                        <p class="w-full md:w-auto text-base md:text-lg lg:text-sm">Delivery between cities, countries or planets? Of course, we can do it</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-3 p-3 md:p-6 lg:p-4 rounded-lg rounded-ss-3xl rounded-ee-3xl">
+                    <img class="w-24 md:w-36 lg:w-36" src="/image/Gaming 2.png" alt="">
+                    <div class="flex-1 text-center md:text-left space-y-2">
+                        <h1 class="font-bold text-lg md:text-xl lg:text-xl">Delivery Anywhere</h1>
+                        <p class="w-full md:w-auto text-base md:text-lg lg:text-sm">Delivery between cities, countries or planets? Of course, we can do it</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-3 p-3 md:p-6 lg:p-4 rounded-lg rounded-ss-3xl rounded-ee-3xl">
+                    <img class="w-24 md:w-36 lg:w-36" src="/image/working 2.png" alt="">
+                    <div class="flex-1 text-center md:text-left space-y-2">
+                        <h1 class="font-bold text-lg md:text-xl lg:text-xl">Delivery Anywhere</h1>
+                        <p class="w-full md:w-auto text-base md:text-lg lg:text-sm">Delivery between cities, countries or planets? Of course, we can do it</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex justify-center items-center p-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-48">
+                <div class="py-0 lg:py-24">
+                    <p class="text-[#FFAC00] mb-2 font-medium">Smart people with try our services</p>
+                    <h1 class="text-4xl font-bold w-full lg:w-96 mb-4">Easy-To-Use. This is How AstoExpress Works</h1>
+                    <p class="text-[#777777] w-full lg:w-96 mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                    <div class="">
+                        <button class="py-3 px-6 bg-[#2DA37D] text-white font-bold rounded-lg hover:bg-transparent transition duration-300 block mb-3 md:mb-0 md:inline-block md:mr-3 hover:text-[#2DA37D]">Try Now</button>
+                    </div>
+                </div> 
+
+                <div class="flex flex-col items-center gap-4">
+                    <div class="lg:flex justify-center items-center lg:gap-3">
+                        <div class="outline outline-1 outline-gray-500 rounded-md rounded-ss-2xl rounded-ee-2xl w-full max-w-xs lg:max-w-sm p-3 lg:p-4 mb-2 lg:mb-1">
+                            <div class="flex justify-center items-center gap-2">
+                                <div class="bg-[#141533] p-1 rounded-lg rounded-ss-xl rounded-ee-xl flex justify-center items-center text-sm p-2 px-4 w-10 h-10 flex-shrink-0">
+                                    <p class="text-white font-bold text-lg">1</p>
+                                </div>
+                                <div class="">
+                                    <p class="font-bold text-sm">Packing Package</p>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:flex justify-center items-center lg:gap-3">
+                        <div class="outline outline-1 outline-gray-500 rounded-md rounded-ss-2xl rounded-ee-2xl w-full max-w-xs lg:max-w-sm p-3 lg:p-4 mb-2 lg:mb-1">
+                            <div class="flex justify-center items-center gap-2">
+                                <div class="bg-[#141533] p-1 rounded-lg rounded-ss-xl rounded-ee-xl flex justify-center items-center text-sm p-2 px-4 w-10 h-10 flex-shrink-0">
+                                    <p class="text-white font-bold text-lg">2</p>
+                                </div>
+                                <div class="">
+                                    <p class="font-bold text-sm">Fill the information</p>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:flex justify-center items-center lg:gap-3">
+                        <div class="outline outline-1 outline-gray-500 rounded-md rounded-ss-2xl rounded-ee-2xl w-full max-w-xs lg:max-w-sm p-3 lg:p-4 mb-2 lg:mb-1">
+                            <div class="flex justify-center items-center gap-2">
+                                <div class="bg-[#141533] p-1 rounded-lg rounded-ss-xl rounded-ee-xl flex justify-center items-center text-sm p-2 px-4 w-10 h-10 flex-shrink-0">
+                                    <p class="text-white font-bold text-lg">3</p>
+                                </div>
+                                <div class="">
+                                    <p class="font-bold text-sm">Select the Services</p>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:flex justify-center items-center lg:gap-3">
+                        <div class="outline outline-1 outline-gray-500 rounded-md rounded-ss-2xl rounded-ee-2xl w-full max-w-xs lg:max-w-sm p-3 lg:p-4 mb-2 lg:mb-1">
+                            <div class="flex justify-center items-center gap-2">
+                                <div class="bg-[#141533] p-1 rounded-lg rounded-ss-xl rounded-ee-xl flex justify-center items-center text-sm p-2 px-4 w-10 h-10 flex-shrink-0">
+                                    <p class="text-white font-bold text-lg">4</p>
+                                </div>
+                                <div class="">
+                                    <p class="font-bold text-sm">Package Ready Delivery</p>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex flex-col lg:flex-row justify-start items-start lg:items-start min-h-screenh p-4 lg:p-0">
+            <div class="w-full lg:w-6/12 py-8 lg:py-16 flex justify-center lg:justify-start">
+                <img class="w-full lg:w-10/12" src="/image/VR.png" alt="VR Image">
+            </div>
+            <div class="w-full lg:w-6/12 lg:mx-32 py-0 lg:py-20">
+                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 lg:gap-0">
+                    <h1 class="font-bold text-2xl lg:text-3xl">Frequently Asked Questions</h1>
+                    <p class="text-[#FFAC00]">Learn More</p>
+                </div>
+                <div class="py-8 lg:py-12">
+                    <div class="py-4 question">
+                        <div class="flex justify-between items-center">
+                            <h1 class="font-bold text-lg lg:text-xl">What if something goes wrong & my package gets lost?</h1>
+                            <a href="#" class="toggle-text" data-state="closed" onclick="toggleAnswer(this)">
+                                <img class="w-6 h-6" src="/icons/add.svg" alt="Add Icon">
+                            </a>
+                        </div>
+                        <div class="mt-2 answer hidden">
+                            <p class="text-[#929296]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                        </div>
+                    </div>
+                    <div class="py-4 question">
+                        <div class="flex justify-between items-center">
+                            <h1 class="font-bold text-lg lg:text-xl">Does the courier treat my package carefully?</h1>
+                            <a href="#" class="toggle-text" data-state="closed" onclick="toggleAnswer(this)">
+                                <img class="w-6 h-6" src="/icons/add.svg" alt="Add Icon">
+                            </a>
+                        </div>
+                        <div class="mt-2 answer hidden">
+                            <p class="text-[#929296]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                        </div>
+                    </div>
+                    <div class="py-4 question">
+                        <div class="flex justify-between items-center">
+                            <h1 class="font-bold text-lg lg:text-xl">How do I know the status of my package?</h1>
+                            <a href="#" class="toggle-text" data-state="closed" onclick="toggleAnswer(this)">
+                                <img class="w-6 h-6" src="/icons/add.svg" alt="Add Icon">
+                            </a>
+                        </div>
+                        <div class="mt-2 answer hidden">
+                            <p class="text-[#929296]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                        </div>
+                    </div>
+                    <div class="py-4 question">
+                        <div class="flex justify-between items-center">
+                            <h1 class="font-bold text-lg lg:text-xl">I'm lazy to go out, can I send packages from home?</h1>
+                            <a href="#" class="toggle-text" data-state="closed" onclick="toggleAnswer(this)">
+                                <img class="w-6 h-6" src="/icons/add.svg" alt="Add Icon">
+                            </a>
+                        </div>
+                        <div class="mt-2 answer hidden">
+                            <p class="text-[#929296]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <section class="mt-0 lg:mt-16">
+        <div class="bg-linear-hero flex justify-between items-center py-16">
+            <img class="hidden lg:block lg:w-48 absolute left-0" src="/icons/Star 2.svg" alt="Star Left">
+            <div class="flex flex-col justify-center items-center w-full px-4 lg:px-0 relative z-10">
+                <h1 class="text-white font-bold text-2xl lg:text-3xl w-auto lg:w-96 text-center">Let's Us Send Your Package To Any Destination</h1>
+                <div class="flex justify-center items-center">
+                    <div class="mt-4">
+                        <button class="py-2 px-10 lg:px-20 bg-[#ffff] text-black font-bold rounded-lg hover:bg-transparent transition duration-300">Try Now</button>
+                    </div>
+                </div>
+            </div>
+            <img class="hidden lg:block lg:w-60 absolute right-0" src="/icons/Star 1.svg" alt="Star Right">
+        </div>        
+    </section>
+
+    <section class="mt-12 lg:mt-24">
+        <div class="flex justify-center items-center">
+            <div class="w-full overflow-x-auto p-4 cursor-pointer" id="scrollContainer">
+                <div class="flex space-x-8 w-max">
+                    <div class="bg-linear-hero text-white p-5 w-80 lg:w-96 rounded-md rounded-ss-3xl rounded-ee-3xl">
+                        <div class="flex items-center gap-3 py-2">
+                            <img class="w-16" src="/image/av3.png" alt="Avatar">
+                            <div>
+                                <h1 class="font-bold">Mirana Badford</h1>
+                                <p class="text-sm">CEO at Phone Store</p>
+                            </div>
+                        </div>
+                        <p class="py-3">“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.”</p>
+                    </div>
+                    <div class="bg-linear-hero text-white p-5 w-80 lg:w-96 rounded-md rounded-ss-3xl rounded-ee-3xl">
+                        <div class="flex items-center gap-3 py-2">
+                            <img class="w-16" src="/image/av1.png" alt="Avatar">
+                            <div>
+                                <h1 class="font-bold">Mirana Badford</h1>
+                                <p class="text-sm">CEO at Phone Store</p>
+                            </div>
+                        </div>
+                        <p class="py-3">“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.”</p>
+                    </div>
+                    <div class="bg-linear-hero text-white p-5 w-80 lg:w-96 rounded-md rounded-ss-3xl rounded-ee-3xl">
+                        <div class="flex items-center gap-3 py-2">
+                            <img class="w-16" src="/image/av2.png" alt="Avatar">
+                            <div>
+                                <h1 class="font-bold">Mirana Badford</h1>
+                                <p class="text-sm">CEO at Phone Store</p>
+                            </div>
+                        </div>
+                        <p class="py-3">“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.”</p>
+                    </div>
+                    <div class="bg-linear-hero text-white p-5 w-80 lg:w-96 rounded-md rounded-ss-3xl rounded-ee-3xl">
+                        <div class="flex items-center gap-3 py-2">
+                            <img class="w-16" src="/image/av1.png" alt="Avatar">
+                            <div>
+                                <h1 class="font-bold">Mirana Badford</h1>
+                                <p class="text-sm">CEO at Phone Store</p>
+                            </div>
+                        </div>
+                        <p class="py-3">“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="main.js"></script>
+</html>
