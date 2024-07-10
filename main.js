@@ -2,9 +2,16 @@ function toggleMenu() {
     const mobileNav = document.getElementById('mobile-nav');
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const closeIcon = document.getElementById('close-icon');
-    mobileNav.classList.toggle('hidden');
-    hamburgerIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
+    
+    if (mobileNav.classList.contains('hidden')) {
+        mobileNav.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+    } else {
+        mobileNav.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
