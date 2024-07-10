@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AstroExpress</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/input.css">
     <style>
         .scroll-container::-webkit-scrollbar {
@@ -24,12 +25,12 @@
     </style>
 </head>
 
-<body class="scroll-smooth">
+<body class="scroll-smooth font-sans">
     <section class="bg-linear-hero max-h-max">
         <div class="w-full flex justify-center sticky left-0 top-0 z-50">
-            <nav class="w-full max-w-screen-xl mx-auto flex py-6 items-center justify-between px-7 md:px-11 lg:px-24">
+            <nav class="w-full max-w-screen-xl mx-auto flex py-6 items-center justify-between px-7 md:px-11 lg:px-24 fixed">
                 <img class="w-36 lg:w-44" src="/image/Logo.png" alt="Logo">
-                <ul id="nav-items" class="hidden md:flex flex-1 justify-center gap-5 lg:gap-5 md:gap-2 items-center text-lg font-normal text-white">
+                <ul id="nav-items" class="hidden md:flex flex-1 justify-center gap-5 lg:gap-5 md:gap-2 items-center text-lg font-normal text-white ">
                     <li><a href="">Our Service</a></li>
                     <li><a href="">Our Check Recipes</a></li>
                     <li><a href="">Our Check Shipping Free</a></li>
@@ -62,7 +63,7 @@
             </ul>
         </div>
 
-        <section class="px-4 md:px-24 py-14 lg:py-16 text-white">
+        <section class="px-4 md:px-24 py-14 lg:mt-28 text-white">
             <div class="container mx-auto flex flex-col md:flex-row gap-8">
                 <div class="md:w-1/2 mt-10 px-0 lg:px-5">
                     <p class="text-[#FFAC00] font-medium mb-3">Many smart people have used our service</p>
@@ -301,7 +302,13 @@
     </section>
 
     <section class="mt-12 lg:mt-24">
-        <div class="flex justify-center items-center">
+        <div class="flex items-center justify-center">
+            <div class="text-center">
+                <h1 class="text-[#FFAC00] font-semibold text-lg">Happy Testimonial</h1>
+                <p class="text-2xl font-bold text-[#141533]">What People Say About Our Services</p>
+            </div>
+        </div>
+        <div class="flex justify-center items-center mt-12">
             <div class="w-full overflow-x-auto p-4 cursor-pointer" id="scrollContainer">
                 <div class="flex space-x-8 w-max">
                     <div class="bg-linear-hero text-white p-5 w-80 lg:w-96 rounded-md rounded-ss-3xl rounded-ee-3xl">
